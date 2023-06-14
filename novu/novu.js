@@ -5,7 +5,7 @@ import CircularJSON from "circular-json";
 dotenv.config();
 
 export const getNotification = async (title, description, email, Id) => {
-  const novu = new Novu(process.env.NOVU_API_KEY);
+  const novu = "6088b3d4ea8563f83fed089a060cc80e";
 
   await novu.subscribers.identify(Id, {
     email: email,
@@ -31,7 +31,7 @@ export const smsNotification = async (
   Id,
   country_code
 ) => {
-  const novu = new Novu(process.env.NOVU_API_KEY);
+  const novu = "6088b3d4ea8563f83fed089a060cc80e";
 
   novu.trigger("sms", {
     to: {
@@ -46,7 +46,7 @@ export const smsNotification = async (
 };
 
 export const inAppNotification = async (title, description, Id, message) => {
-  const novu = new Novu(process.env.NOVU_API_KEY);
+  const novu = "6088b3d4ea8563f83fed089a060cc80e";
 
   await novu.subscribers.identify(Id, {
     firstName: "inAppSubscriber",
@@ -65,7 +65,7 @@ export const inAppNotification = async (title, description, Id, message) => {
 };
 
 export const getTopics = async (req, res) => {
-  const novu = new Novu(process.env.NOVU_API_KEY);
+  const novu = "6088b3d4ea8563f83fed089a060cc80e";
   console.log(process.env.NOVU_API_KEY);
 
   // key is novu-sumit
@@ -80,7 +80,7 @@ export const getTopics = async (req, res) => {
 };
 
 export const getTopicByKey = async (req, res) => {
-  const novu = new Novu(process.env.NOVU_API_KEY);
+  const novu = "6088b3d4ea8563f83fed089a060cc80e";
   const { key } = req.params;
 
   try {
@@ -92,7 +92,7 @@ export const getTopicByKey = async (req, res) => {
 };
 
 export const createSubscriber = async (req, res) => {
-  const novu = new Novu(process.env.NOVU_API_KEY);
+  const novu = "6088b3d4ea8563f83fed089a060cc80e";
 
   try {
     const email = req.body.email;
@@ -111,7 +111,7 @@ export const createSubscriber = async (req, res) => {
 };
 
 export const addSubscriberToTopic = async (req, res) => {
-  const novu = new Novu(process.env.NOVU_API_KEY);
+  const novu = "6088b3d4ea8563f83fed089a060cc80e";
   try {
     // Get the subscriber ID from the request body
     const subscriberId = req.body.subscriberId;
@@ -132,7 +132,7 @@ export const addSubscriberToTopic = async (req, res) => {
 };
 
 export const sendNotificationToTopic = async (req, res) => {
-  const novu = new Novu(process.env.NOVU_API_KEY);
+  const novu = "6088b3d4ea8563f83fed089a060cc80e";
 
   try {
     // Get the topic key from the request body
