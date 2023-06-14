@@ -24,7 +24,7 @@ app.get('/',(req,res)=>{
 
 
 
-const CONNECTION_URL=process.env.MONGO_CONNECTION_URL;
+const CONNECTION_URL="mongodb+srv://vivek161985:rsZ0aemGsVrzCPSf@cluster0.z7j1d9q.mongodb.net/?retryWrites=true&w=majority";
 
 const PORT= process.env.PORT || 5000;
 
